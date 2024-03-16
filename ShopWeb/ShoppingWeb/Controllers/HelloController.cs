@@ -9,26 +9,26 @@ namespace ShoppingWeb.Controllers
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class HelloController : ControllerBase
-    {
-        private readonly MyDbContext ctx; 
-        //初始化 依赖注入
-        public HelloController (MyDbContext ctx)
+    {  //初始化 依赖注入
+        private readonly MyDbContext ctx;
+
+        public HelloController(MyDbContext ctx)
         {
 
             this.ctx = ctx;
 
         }
-        
+
 
         [HttpGet]
-        public async Task<IEnumerable<Category>>  GetList( )
-            {
+        public async Task<IEnumerable<Category>> GetList()
+        {
 
             var List = await ctx.Categories.ToListAsync();
 
             return List;
 
 
-            }
+        }
     }
 }
