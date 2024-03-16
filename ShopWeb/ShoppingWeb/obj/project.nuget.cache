@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cLrbiTrvJXga8N2avAEhVTQkUpkRUhVJ/pEyKUF99pcabmGpD21GfM3ACV/xyybLhyhddtjrfwGZ0xRCxRmV0Q==",
+  "dgSpecHash": "NfqBqiSC41FCb7znyl/M/gplp/JvW9d9M0HY3TIyU1PAVDQT9OQPRaSv/rp+on0tNhQ+ktckgQUGUpvd2eQiDw==",
   "success": true,
-  "projectFilePath": "D:\\JAVA\\ShopWeb\\ShoppingWeb\\ShoppingWeb.csproj",
+  "projectFilePath": "D:\\JAVA\\shizhan\\vueProject\\ShopWeb\\ShoppingWeb\\ShoppingWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\14256\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\14256\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.27\\microsoft.entityframeworkcore.6.0.27.nupkg.sha512",

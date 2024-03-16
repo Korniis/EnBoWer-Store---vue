@@ -1,4 +1,4 @@
-namespace ShoppingWeb
+namespace ShoppingWeb.Models
 {
     public class WeatherForecast
     {

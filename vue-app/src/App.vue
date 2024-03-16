@@ -2,11 +2,12 @@
   <el-container class="layout-container-demo">
     <el-aside width="200px">
       <el-scrollbar style="background-color:#303133; ">
-        <div id="headText">
+        <div class="headText">
           <el-icon>
             <Chicken />
           </el-icon>
-          EnBoWer'Store
+          <div>EnBoWer'Store</div>
+       
           <el-icon>
             <Chicken />
           </el-icon>
@@ -158,14 +159,16 @@ height: 100vh;
   padding: 0;
 }
 
-#headText {
+.headText {
 
   height: 60px;
-  color: white;
+  color: white; 
+  justify-content: center;
+   align-items: center;
+  display: flex;
   text-align: center;
-  line-height: 50px;
   font-weight: bold;
-  background-color: #303130;
+  background-color:#303133;
 
 }
 

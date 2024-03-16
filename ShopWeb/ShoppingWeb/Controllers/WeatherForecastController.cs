@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ShoppingWeb.Models;
 
 namespace ShoppingWeb.Controllers
 {
