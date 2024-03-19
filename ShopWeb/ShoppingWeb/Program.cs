@@ -25,6 +25,18 @@ namespace ShoppingWeb
             
             
             );
+            builder.Services.AddCors(option =>
+            {
+
+                option.AddPolicy("cors", p =>
+                {
+
+                    p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+
+                });
+
+
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -38,7 +50,7 @@ namespace ShoppingWeb
 
             app.UseAuthorization();
 
-
+            app.UseCors("cors");
             app.MapControllers();
 
             app.Run();
