@@ -12,7 +12,7 @@
         <template #footer>
             <div class="dialog-footer">
                 <el-button @click="dialogVisible = false">Cancel</el-button>
-                <el-button @click="dialogVisible = false" type="primary">
+                <el-button @click="AddCate" type="primary">
                     Confirm
                 </el-button>
             </div>
@@ -21,10 +21,11 @@
 </template>
 
 <script setup>
-import { reactive ,toRefs} from 'vue'
-//import { ElMessageBox } from 'element-plus'
+import { reactive, toRefs } from 'vue'
+import { ElMessageBox } from 'element-plus'
 
-defineProps({
+
+const props = defineProps({
     dialogTitle: {
         type: String,
 
@@ -35,20 +36,42 @@ defineProps({
 const state = reactive({
 
     dialogVisible: false,
-    
-    ruleForms:{
-      
-        id:"",
-        name:"图书",
+
+    ruleForms: {
+
+        id: "",
+        name: "图书",
 
     }
 
 });
 
-const  {dialogVisible,ruleForms} = toRefs(state);
+const { dialogVisible, ruleForms } = toRefs(state);
 
 const dialogCategory = () => {
     state.dialogVisible = true;
+
+}
+
+if (props.dialogTitle === "分类") {
+    let param = {
+
+        name: ruleForms.value.name,
+
+    }
+
+    axios.post("/Category",param).then(()=>{
+
+
+    })
+
+}
+
+
+
+
+const AddCate = () => {
+
 
 }
 
