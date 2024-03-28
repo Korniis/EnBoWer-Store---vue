@@ -85,7 +85,7 @@
         </div>
       </el-header>
 
-      <el-main>
+      <el-main >
         <router-view>
 
         </router-view>
@@ -98,7 +98,7 @@
 
 <script setup>
 
-import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
+import { Menu as IconMenu, Message , Setting } from '@element-plus/icons-vue'
 
 </script>
 
@@ -171,6 +171,10 @@ height: 100vh;
   background-color:#303133;
 
 }
+::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 
 .layout-container-demo .toolbar {
   display: inline-flex;

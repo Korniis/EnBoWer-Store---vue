@@ -17,7 +17,7 @@ namespace ShoppingWeb.Controllers
         [HttpGet]
         public async Task<IEnumerable<Category>> GetList()
         {
-            var List = await ctx.Categories.Take(5).ToListAsync(); 
+            var List = await ctx.Categories.ToListAsync(); 
             return List;
         }
         [HttpGet("{id}")]
@@ -33,7 +33,9 @@ namespace ShoppingWeb.Controllers
         }
         [HttpPost]
         public async Task<ActionResult<int>> Posts(Category model)
-        {
+        { 
+
+
             await ctx.Categories.AddAsync(model);
 
             return await ctx.SaveChangesAsync();
