@@ -7,7 +7,7 @@ namespace ShoppingWeb.Services.Interfaces
     {
         AuthenticateResponse Authenticate( AuthenticateRequest request );
 
-        User Get(int id);
+        User GetById(int id);
 
                
 

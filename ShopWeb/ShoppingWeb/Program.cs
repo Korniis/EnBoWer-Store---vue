@@ -2,6 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.OpenApi.Models;
 using ShoppingWeb.Data;
+using ShoppingWeb.Helpers;
+using ShoppingWeb.Services.Implmentation;
+using ShoppingWeb.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,7 +62,8 @@ namespace ShoppingWeb
                     p.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
                 });
             });
-
+            builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection(nameof(AuthSettings)));
+            builder.Services.AddScoped<IUserService,UserService>();
             var app = builder.Build();
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

@@ -74,14 +74,15 @@ namespace ShoppingWeb.Services.Implmentation
             //token 
             var tokenHandler = new JwtSecurityTokenHandler();
 
-                
+           var token =  tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
 
     
 
-    public User Get(int id)
+    public User GetById(int id)
     {
-        throw new NotImplementedException();
+            return _users.FirstOrDefault(u => u.Id == id);
     }
 }
 }
