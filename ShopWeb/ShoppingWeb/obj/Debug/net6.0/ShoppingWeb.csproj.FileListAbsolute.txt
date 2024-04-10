@@ -82,3 +82,8 @@ D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\obj\Debug\net6.0\refint\ShoppingW
 D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\obj\Debug\net6.0\ShoppingWeb.pdb
 D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\obj\Debug\net6.0\ShoppingWeb.genruntimeconfig.cache
 D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\obj\Debug\net6.0\ref\ShoppingWeb.dll
+D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\JAVA\shizhan\vueProject\ShopWeb\ShoppingWeb\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

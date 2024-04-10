@@ -41,7 +41,7 @@ onMounted(() => {
 });
 
 const getList = () => {
-  return axios.get('/Hello/GetList').then((res) => {
+  return axios.get('/Category/GetList').then((res) => {
     tableData.list = res.data.map((item, index) => {
       return { ...item, nid: index + 1 };
     });
@@ -78,7 +78,7 @@ const open = (row) => {
   )
     .then(() => {
       console.log(row.id);
-      axios.delete('/Hello/Delete/' + row.id).then(() => {
+      axios.delete('/Category/Delete/' + row.id).then(() => {
         ElMessage({
           type: 'success',
           message: 'Delete completed',

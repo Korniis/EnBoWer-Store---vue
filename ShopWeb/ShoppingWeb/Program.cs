@@ -71,10 +71,13 @@ namespace ShoppingWeb
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+          
 
             app.UseHttpsRedirection();
+            app.UseCors("cors"); 
+            app.UseMiddleware<JwtMiddleware>();
             app.UseAuthorization();
-            app.UseCors("cors");
+           
             app.MapControllers();
             app.Run();
         }

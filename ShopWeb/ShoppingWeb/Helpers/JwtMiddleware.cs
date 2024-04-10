@@ -19,11 +19,11 @@ namespace ShoppingWeb.Helpers
         public async Task Invoke( HttpContext context,IUserService service )
         {
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
-            if (token == null)
+            if (token!= null)
             {
 
                 AttachUserToContext(context,service,token);
-                return;
+              
             }
 
             await _next(context);
@@ -37,7 +37,7 @@ namespace ShoppingWeb.Helpers
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             byte[] key = Encoding.ASCII.GetBytes(_authSettings.Secret);
-            tokenHandler.ValidateToken(token,  new TokenValidationParameters
+            tokenHandler.ValidateToken(token,new TokenValidationParameters
             {
                 ValidateIssuerSigningKey= true,
                 IssuerSigningKey= new SymmetricSecurityKey(key),

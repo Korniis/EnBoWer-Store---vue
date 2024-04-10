@@ -7,7 +7,7 @@
             <Chicken />
           </el-icon>
           <div>EnBoWer'Store</div>
-       
+
           <el-icon>
             <Chicken />
           </el-icon>
@@ -85,7 +85,7 @@
         </div>
       </el-header>
 
-      <el-main >
+      <el-main>
         <router-view>
 
         </router-view>
@@ -98,11 +98,11 @@
 
 <script setup>
 
-import { Menu as IconMenu, Message , Setting } from '@element-plus/icons-vue'
+import { Menu as IconMenu, Message, Setting } from '@element-plus/icons-vue'
 
 </script>
 
-<style >
+<style scoped>
 .layout-container-demo .el-header {
   position: relative;
   background-color: white;
@@ -110,6 +110,7 @@ import { Menu as IconMenu, Message , Setting } from '@element-plus/icons-vue'
   box-shadow: var(--el-box-shadow-light);
 
 }
+
 .card-header {
   display: flex;
   justify-content: space-between;
@@ -124,21 +125,22 @@ import { Menu as IconMenu, Message , Setting } from '@element-plus/icons-vue'
 
 }
 
-.box-card
-{
+.box-card {
 
-width: 100wh;
-height: 100vh;
+  width: 100wh;
+  height: 100vh;
 
 
 }
-.item
-{
+
+.item {
   margin-bottom: 18px;
 }
+
 .text {
   font-size: 14px;
 }
+
 .layout-container-demo .el-aside {
   color: var(--el-text-color-primary);
   background: var(--el-color-primary-light-8);
@@ -162,15 +164,16 @@ height: 100vh;
 .headText {
 
   height: 60px;
-  color: white; 
+  color: white;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   display: flex;
   text-align: center;
   font-weight: bold;
-  background-color:#303133;
+  background-color: #303133;
 
 }
+
 ::-webkit-scrollbar {
   width: 0 !important;
 }

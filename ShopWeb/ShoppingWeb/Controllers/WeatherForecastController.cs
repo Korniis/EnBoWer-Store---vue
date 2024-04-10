@@ -1,10 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
+using ShoppingWeb.Helpers;
 using ShoppingWeb.Models;
 
 namespace ShoppingWeb.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

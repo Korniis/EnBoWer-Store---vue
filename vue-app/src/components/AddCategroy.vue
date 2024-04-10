@@ -77,7 +77,7 @@ const AddCate = () => {
                 name: ruleForms.value.name,
             }
             console.log(param);
-            axios.put("/Hello/Put", param).then(() => {
+            axios.put("/Category/Put", param).then(() => {
                 ElMessage.success("修改成功");
                 state.dialogVisible = false; // close window
             reload();

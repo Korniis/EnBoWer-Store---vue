@@ -1,16 +1,18 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ShoppingWeb.Data;
 using ShoppingWeb.Models;
+using ShoppingWeb.Helpers;
 namespace ShoppingWeb.Controllers
 {
+   
     [Route("api/[controller]/[action]")]
     [ApiController]
-    public class HelloController : ControllerBase
+    [Authorize]
+    public class CategoryController : ControllerBase
     {  //初始化 依赖注入
         private readonly MyDbContext ctx;
-        public HelloController(MyDbContext ctx)
+        public CategoryController(MyDbContext ctx)
         {
             this.ctx = ctx;
         }
