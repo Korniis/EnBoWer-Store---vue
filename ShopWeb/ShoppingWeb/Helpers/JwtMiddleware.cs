@@ -4,7 +4,6 @@ using ShoppingWeb.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Mail;
 using System.Text;
-
 namespace ShoppingWeb.Helpers
 {
     public class JwtMiddleware
@@ -21,18 +20,10 @@ namespace ShoppingWeb.Helpers
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
             if (token!= null)
             {
-
                 AttachUserToContext(context,service,token);
-              
             }
-
             await _next(context);
-
-
-
-
         }
-
         private void AttachUserToContext(HttpContext context, IUserService service, string? token)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
@@ -44,11 +35,8 @@ namespace ShoppingWeb.Helpers
                 ValidateIssuer=false,
                 ValidateAudience=false,
                 ClockSkew=TimeSpan.Zero
-
-
             },
             out var validatedToken
-            
             );
             var jwtToken = (JwtSecurityToken)validatedToken;
             var userId = int.Parse(jwtToken.Claims.FirstOrDefault(c => c.Type == "sub").Value);

@@ -16,8 +16,8 @@ namespace ShoppingWeb.Services.Implmentation
              new User
              {
                  Id=1,
-                 Email = "164@qq.com",
-                 Password = "1234567890"
+                 Email = "123456",
+                 Password = "123456"
              }
         };
         private readonly AuthSettings _authSettings;
@@ -50,7 +50,7 @@ namespace ShoppingWeb.Services.Implmentation
                         new Claim("sub", user.Id.ToString()),
                         new Claim("email", user.Email)
                     }),
-                Expires = DateTime.UtcNow.AddDays(1),
+                Expires = DateTime.UtcNow.AddDays(100),
                 SigningCredentials = new SigningCredentials
                 (
                        new SymmetricSecurityKey(key),
@@ -62,6 +62,7 @@ namespace ShoppingWeb.Services.Implmentation
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
         }
+
         public User GetById(int id)
         {
             return _users.FirstOrDefault(u => u.Id == id);

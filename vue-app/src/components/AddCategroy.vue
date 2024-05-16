@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineExpose, reactive, toRefs, watch, inject } from 'vue'
+import {   reactive, toRefs, watch, inject } from 'vue'
 import { ElMessage } from 'element-plus'
 import axios from 'axios';
 
@@ -41,7 +41,6 @@ watch(() => props.tableRow,
 
         state.ruleForms.id = props.tableRow.id;
         state.ruleForms.name = props.tableRow.name;
-
     },
 
     { deep: true, immediate: true }
@@ -62,13 +61,13 @@ const AddCate = () => {
         };
 
         console.log(param),
-        axios.post("/Hello/Posts", param).then(() => {
+        axios.post("/Category/Posts", param).then(() => {
             ElMessage.success("添加成功");
             state.dialogVisible = false; // close window
             reload();
-           
+
         })
-        
+
     } else {
 
         if (props.dialogTitle === "修改") {
@@ -81,7 +80,7 @@ const AddCate = () => {
                 ElMessage.success("修改成功");
                 state.dialogVisible = false; // close window
             reload();
-           
+
 
             })
         }
